@@ -66,7 +66,7 @@
 		    <!-- 最新发布的博客 开始 -->
 	{% for post in post_list %}
   <article class="excerpt excerpt-1" style="">
-  <a class="focus" href="#" title="{{post.title}}" target="_blank" ><img class="thumb" data-original="/{{post.cover}}" src="{{post.cover}}" alt="{{post.title}}"  style="display: inline;"></a>
+  <a class="focus" href="#" title="{{post.title}}" target="_blank" ><img class="thumb" data-original="/{{post.cover.url}}" src="{{post.cover.url}}" alt="{{post.title}}"  style="display: inline;"></a>
 		<header><a class="cat" href="#" title="{{post.category.name}}" >{{post.category.name}}<i></i></a>
 			<h2><a href="/blog/{{post.id}}" title="{{post.title}}" target="_blank" >{{post.title}}</a>
 			</h2>
@@ -139,7 +139,7 @@
 		  {% for c in comment_list %}
 		  <li><a title="{{c.post.title}}" href="#" >
 				<span class="thumbnail">
-				<img class="thumb" data-original="/{{c.post.cover}}" src="/{{c.post.cover}}" alt="{{c.post.title}}"  style="display: block;">
+				<img class="thumb" data-original="/{{c.post.cover.url}}" src="/{{c.post.cover.url}}" alt="{{c.post.title}}"  style="display: block;">
 				</span>
 				<span class="text">{{c.post.title}}</span>
 				<span class="muted"><i class="glyphicon glyphicon-time"></i>
