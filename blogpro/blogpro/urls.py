@@ -20,7 +20,7 @@ from users.views import LoginView, RegisterView, ActiveView, LogoutView
 from django.conf.urls import include
 from django.conf.urls.static import static
 from django.views.static import serve
-from .settings import MEDIA_ROOT, MEDIA_URL, STATIC_ROOT, STATIC_URL
+from .settings import MEDIA_ROOT, MEDIA_URL
 from .upload import upload_image
 
 urlpatterns = [
@@ -40,4 +40,4 @@ urlpatterns = [
     # url(r"^uploads/(?P<path>.*)$", serve, {"document_root": MEDIA_ROOT, }),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 	url(r'^icodrops/$',  IcodropsView , name='ico'),
-] + static(MEDIA_URL, document_root=MEDIA_ROOT) + static(STATIC_URL, document_root=STATIC_ROOT)
+] + static(MEDIA_URL, document_root=MEDIA_ROOT)
