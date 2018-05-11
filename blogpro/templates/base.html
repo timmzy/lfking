@@ -87,5 +87,14 @@
 <script src="/static/js/bootstrap.min.js"></script>
 <!--<script src="/static/js/jquery.ias.js"></script>-->
 <script src="/static/js/scripts.js"></script>
+<script>
+	t = $("img");
+	t.each(function (e) {
+		self = $(this);
+		if(self.hasClass("img-responsive") == false){
+			self.addClass("img-responsive");
+		}
+	})
+</script>
 </body>
 </html>
