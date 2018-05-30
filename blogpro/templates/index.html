@@ -25,12 +25,12 @@
         {% if banner.is_active %}
             <div class="item active">
             <a href="{{ banner.link_url }}" target="_blank" title="{{banner.title}}" >
-            <img src="{{ banner.cover }}" alt="{{ banner.title}}" class="img-responsive"></a>
+            <img src="{{ banner.cover.url }}" alt="{{ banner.title}}" class="img-responsive"></a>
             </div>
         {% else %}
               <div class="item">
               <a href="{{banner.link_url}}" target="_blank" title="{{banner.title}}" >
-              <img src="{{ banner.cover }}" alt="{{banner.title}}" class="img-responsive"></a>
+              <img src="{{ banner.cover.url }}" alt="{{banner.title}}" class="img-responsive"></a>
               </div>
         {% endif %}
         {% endfor %}
